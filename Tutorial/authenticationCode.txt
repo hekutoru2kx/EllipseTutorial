@@ -1,0 +1,3 @@
+_frmAuth.StartPosition = FormStartPosition.CenterScreen;
+_frmAuth.SelectedEnviroment = drpEnviroment.SelectedItem.Label;
+if (_frmAuth.ShowDialog() != DialogResult.OK) return;
