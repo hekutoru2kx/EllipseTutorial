@@ -34,24 +34,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tab1 = this.Factory.CreateRibbonTab();
+            this.tabEllipse = this.Factory.CreateRibbonTab();
             this.grpProyecto = this.Factory.CreateRibbonGroup();
             this.box1 = this.Factory.CreateRibbonBox();
             this.btnFormat = this.Factory.CreateRibbonButton();
             this.btnAbout = this.Factory.CreateRibbonButton();
             this.drpEnviroment = this.Factory.CreateRibbonDropDown();
             this.btnExecute = this.Factory.CreateRibbonButton();
-            this.tab1.SuspendLayout();
+            this.tabEllipse.SuspendLayout();
             this.grpProyecto.SuspendLayout();
             this.box1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tab1
+            // tabEllipse
             // 
-            this.tab1.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
-            this.tab1.Groups.Add(this.grpProyecto);
-            this.tab1.Label = "TabAddIns";
-            this.tab1.Name = "tab1";
+            this.tabEllipse.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
+            this.tabEllipse.Groups.Add(this.grpProyecto);
+            this.tabEllipse.Label = "ELLIPSE 8";
+            this.tabEllipse.Name = "tabEllipse";
             // 
             // grpProyecto
             // 
@@ -92,10 +92,10 @@
             // 
             this.Name = "RibbonEllipse";
             this.RibbonType = "Microsoft.Excel.Workbook";
-            this.Tabs.Add(this.tab1);
+            this.Tabs.Add(this.tabEllipse);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.RibbonEllipse_Load);
-            this.tab1.ResumeLayout(false);
-            this.tab1.PerformLayout();
+            this.tabEllipse.ResumeLayout(false);
+            this.tabEllipse.PerformLayout();
             this.grpProyecto.ResumeLayout(false);
             this.grpProyecto.PerformLayout();
             this.box1.ResumeLayout(false);
@@ -106,7 +106,7 @@
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonTab tabEllipse;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup grpProyecto;
         internal Microsoft.Office.Tools.Ribbon.RibbonBox box1;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnFormat;

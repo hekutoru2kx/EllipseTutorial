@@ -22,5 +22,15 @@ namespace EllipseProyectoExcelAddIn.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ews-el8prod.lmnerp01.cerrejon.com/ews/services/WorkOrderService")]
+        public string EllipseProyectoExcelAddIn_WorkOrderService_WorkOrderService {
+            get {
+                return ((string)(this["EllipseProyectoExcelAddIn_WorkOrderService_WorkOrderService"]));
+            }
+        }
     }
 }

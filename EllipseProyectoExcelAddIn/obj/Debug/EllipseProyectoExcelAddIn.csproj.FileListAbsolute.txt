@@ -14,4 +14,7 @@ D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\obj\Debug\EllipsePr
 D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\obj\Debug\EllipseProyectoExcelAddIn.dll
 D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\obj\Debug\EllipseProyectoExcelAddIn.pdb
 D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\bin\Debug\EllipseProyectoExcelAddIn.vsto
+D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\bin\Debug\System.Web.Services.Ellipse.dll
 D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\bin\Debug\EllipseCommonsClassLibrary.dll
+D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\bin\Debug\System.Web.Services.Ellipse.Post.PostExecute.dll
+D:\EllipseTutorial\EllipseTutorial\EllipseProyectoExcelAddIn\bin\Debug\RestSharp.dll
