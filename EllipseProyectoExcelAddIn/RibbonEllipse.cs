@@ -10,6 +10,8 @@ using EllipseCommonsClassLibrary.Classes;
 using EllipseCommonsClassLibrary.Connections;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Web.Services.Ellipse;
+using EllipseCommonsClassLibrary.Constants;
+using EllipseCommonsClassLibrary.Utilities;
 using EllipseProyectoExcelAddIn.WorkOrderService;
 using Authenticator = EllipseCommonsClassLibrary.AuthenticatorService;
 using Screen = EllipseCommonsClassLibrary.ScreenService;
@@ -47,8 +49,8 @@ namespace EllipseProyectoExcelAddIn
                 var excelSheet = (Excel.Worksheet)_excelApp.ActiveWorkbook.ActiveSheet;
         
                 var titleRow = 1;
-                var sqlQuery = @"SELECT WORK_ORDER FROM ELLIPSE.MSF620 WO WHERE WO.RAISED_DATE = '20190124' AND WO.WORK_GROUP = 'MTOLOC'";
-                var tableName = "table";
+                var sqlQuery = @"SELECT WORK_ORDER FROM ELLIPSE.MSF620 WO WHERE" + 
+                               @" WO.RAISED_DATE = '20190124' AND WO.WORK_GROUP = 'MTOLOC'";
         
                 var dbName = "EL8PROD";
                 var dbUser = "SIGCON";
@@ -57,7 +59,8 @@ namespace EllipseProyectoExcelAddIn
                 var connectionTimeOut = 30;//default ODP 15
                 var poolingDataBase = true;//default ODP true
         
-                var connectionString = "Data Source=" + dbName + ";User ID=" + dbUser + ";Password=" + dbPass + "; Connection Timeout=" + 
+                var connectionString = "Data Source=" + dbName + ";User ID=" + dbUser +
+                                       ";Password=" + dbPass + "; Connection Timeout=" + 
                                        connectionTimeOut + "; Pooling=" + poolingDataBase.ToString().ToLower();
         
                 sqlOracleConn = new OracleConnection(connectionString);
@@ -108,7 +111,7 @@ namespace EllipseProyectoExcelAddIn
                 _excelApp.Cursor = Excel.XlMousePointer.xlDefault;
             }
         }
-
+    
         private void ExecuteQueryCommons()
         {
             try
@@ -118,7 +121,8 @@ namespace EllipseProyectoExcelAddIn
                 _cells.SetCursorWait();
         
                 var titleRow = 1;
-                var sqlQuery = @"SELECT WORK_ORDER FROM ELLIPSE.MSF620 WO WHERE WO.RAISED_DATE = '20190124' AND WO.WORK_GROUP = 'MTOLOC'";
+                var sqlQuery = @"SELECT WORK_ORDER FROM ELLIPSE.MSF620 WO" +
+                               @" WHERE WO.RAISED_DATE = '20190124' AND WO.WORK_GROUP = 'MTOLOC'";
                 var tableName = "table";
                 _eFunctions.SetDBSettings(drpEnviroment.SelectedItem.Label);
                 var dataReader = _eFunctions.GetQueryResult(sqlQuery);
@@ -147,7 +151,8 @@ namespace EllipseProyectoExcelAddIn
             }
             catch (Exception ex)
             {
-                Debugger.LogError("RibbonEllipse:GetQueryResult()", "\n\rMessage:" + ex.Message + "\n\rSource:" + ex.Source + "\n\rStackTrace:" + ex.StackTrace);
+                Debugger.LogError("RibbonEllipse:GetQueryResult()", "\n\rMessage:" + ex.Message +
+                                                                    "\n\rSource:" + ex.Source + "\n\rStackTrace:" + ex.StackTrace);
                 MessageBox.Show(@"Se ha producido un error. " + ex.Message);
             }
             finally
@@ -318,6 +323,11 @@ namespace EllipseProyectoExcelAddIn
             //Authenticate();
             //AuthenticateCommons();
             GeneralService();
+        }
+
+        private void btnAbout_Click(object sender, RibbonControlEventArgs e)
+        {
+            new AboutBoxExcelAddIn("Desarrollador 1", "Desarrollador 2").ShowDialog();
         }
     }
 }

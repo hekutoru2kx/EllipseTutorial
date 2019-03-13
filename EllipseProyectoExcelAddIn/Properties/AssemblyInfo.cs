@@ -7,9 +7,9 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("EllipseProyectoExcelAddIn")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Proyecto de Prueba de Desarrollo")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Hambings SAS")]
 [assembly: AssemblyProduct("EllipseProyectoExcelAddIn")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]

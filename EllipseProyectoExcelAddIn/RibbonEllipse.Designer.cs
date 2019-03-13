@@ -76,6 +76,7 @@
             // 
             this.btnAbout.Label = "?";
             this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnAbout_Click);
             // 
             // drpEnviroment
             // 

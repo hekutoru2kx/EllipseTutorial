@@ -5,7 +5,7 @@
     <StartProgram>D:\Programs\Microsoft Office\Office15\EXCEL.EXE</StartProgram>
   </PropertyGroup>
   <PropertyGroup>
-    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <PublishUrlHistory>D:\Projects\Release\EllipseProyectoExcelAddIn\|D:\Projects\Release\|publish\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
   </PropertyGroup>

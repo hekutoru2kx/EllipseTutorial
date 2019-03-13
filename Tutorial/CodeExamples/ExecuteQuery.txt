@@ -1,4 +1,4 @@
-//Para ejecutar este código debe tener referenciados los siguientes namespaces
+﻿//Para ejecutar este código debe tener referenciados los siguientes namespaces
 
 //using System.Data;
 //using Excel = Microsoft.Office.Interop.Excel;
@@ -14,7 +14,6 @@ private void ExecuteQuery()
 
                 var titleRow = 1;
                 var sqlQuery = @"SELECT WORK_ORDER FROM ELLIPSE.MSF620 WO WHERE WO.RAISED_DATE = '20190124' AND WO.WORK_GROUP = 'MTOLOC'";
-                var tableName = "table";
 
                 var dbName = "EL8PROD";
                 var dbUser = "SIGCON";
